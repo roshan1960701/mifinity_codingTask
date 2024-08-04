@@ -201,6 +201,6 @@ customDialog(){
      dashboardController.bannerList.clear();
      dashboardController.productionList.clear();
      dashboardController.moviesDataList.clear();
-     dashboardController.dataLoading.value = false;
+     dashboardController.navBarSelectedIndex.value = 0;
    }
 }
