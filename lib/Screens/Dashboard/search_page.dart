@@ -4,6 +4,7 @@ import 'package:mifinity_task/Colors/colors.dart';
 import 'package:mifinity_task/Utility/utility.dart';
 import 'package:get/get.dart';
 import 'package:mifinity_task/Screens/Dashboard/dashboard_controller.dart';
+import 'package:mifinity_task/Storage/storage.dart';
 
 @RoutePage()
 class SearchPage extends StatefulWidget {
@@ -16,6 +17,11 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
 
   final dashboardController = Get.find<DashboardController>();
+
+  @override
+  initState() {
+    super.initState();
+  }
 
   Widget searchBar(context){
     return Container(
@@ -35,9 +41,7 @@ class _SearchPageState extends State<SearchPage> {
           color: Colors.white,
           fontWeight: FontWeight.w400,
         ),
-        onChanged: (value){
-          // dashboardController.searchText.value = value;
-          // print(dashboardController.searchText.value);
+        onFieldSubmitted:(value){
           dashboardController.getMoviesByQuery(value);
         },
 
@@ -47,7 +51,9 @@ class _SearchPageState extends State<SearchPage> {
           filled: true,
           fillColor: Colors.white.withOpacity(0.1),
           prefixIcon: Icon(Icons.search_rounded,color: Colors.white,),
-          suffixIcon: Icon(Icons.mic,color: Colors.white,),
+          suffixIcon: IconButton(onPressed: (){
+            dashboardController.searchController.clear();
+          }, icon: Icon(Icons.close,color: Colors.white,),),
           hintStyle: TextStyle(
             fontSize: getFontSize(context, 16),
             color: Colors.white.withOpacity(0.9),
@@ -79,9 +85,62 @@ class _SearchPageState extends State<SearchPage> {
     );
   }
 
+  Widget movieTiles(src,movieName){
+    return paddingAll(0.0, 15.0, 0.0, 0.0, Container(
+      width: getWidth(context),
+      height: getHeight(context) * 0.08,
+      // color: Colors.yellowAccent,
+      child: Row(
+        children: [
+          Align(
+            alignment: Alignment.centerLeft,
+            child: SizedBox(
+              width: getWidth(context) * 0.12,
+              height: getHeight(context) * 0.08,
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(5.0),
+                  child:SizedBox.fromSize(
+                    child: Image.network(src,
+                      fit: BoxFit.fill,
+                    ),
+                  )
+              ),
+            ),
+          ),
+          Align(
+              alignment: Alignment.centerLeft,
+              child: paddingAll(0.0, 0.0, getWidth(context) * 0.04, 0.0, SizedBox(
+                  width: getWidth(context) * 0.7,
+                  child: Text(movieName,
+                  style: TextStyle(
+                    overflow:TextOverflow.ellipsis,
+                    color: Colors.white,
+                    fontSize: getFontSize(context, 16),
+                    fontWeight: FontWeight.w500,
+                  )))
+                ,)),
+        ],
+      ),
+    ));
+  }
+
+  Widget searchList(){
+    return Obx(()=> Container(
+      width: getWidth(context),
+      height: getHeight(context) * 0.1 * dashboardController.filteredMovies.length,
+      child: ListView.builder(
+          itemCount: dashboardController.filteredMovies.length,
+          physics: NeverScrollableScrollPhysics(),
+          itemBuilder: (BuildContext,index){
+            int reversedIndex = dashboardController.filteredMovies.length - 1 - index;
+            return movieTiles(dashboardController.filteredMovies[reversedIndex]['image'],dashboardController.filteredMovies[reversedIndex]['title']);
+          }),
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(child: Scaffold(
       resizeToAvoidBottomInset:false,
       body: Container(
         width: getWidth(context),
@@ -96,11 +155,20 @@ class _SearchPageState extends State<SearchPage> {
         child: SingleChildScrollView(
             child: Column(
               children: [
+                paddingAll(20.0, 0.0, 10.0, 10.0, searchBar(context),),
+                paddingAll(20.0, 0.0, 10.0, 10.0, searchList(),),
+                SizedBox(height: 40.0,),
 
               ],
             )
         ),
       ),
-    );
+    ));
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    dashboardController.searchController.clear();
   }
 }

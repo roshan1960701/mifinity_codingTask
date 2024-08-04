@@ -52,9 +52,6 @@ class DashboardController extends GetxService{
    getMoviesByQuery(String query) {
     for (var category in moviesDataList) {
       for (var movie in category['movies']) {
-        // if (movie['title'].toLowerCase().contains(query.toLowerCase())) {
-        //   matchedMovies.add(movie);
-        // }
 
         // Check if the movie title contains the query
         bool titleMatches = movie['title'].toLowerCase().contains(query.toLowerCase());
@@ -68,7 +65,6 @@ class DashboardController extends GetxService{
         }
       }
     }
-    print(filteredMovies);
   }
 
 }

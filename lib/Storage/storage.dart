@@ -16,3 +16,16 @@ Future<dynamic> fetchDashboardData() async {
   return response;
 }
 
+Future<void> saveSearchData(data)async{
+  final box = await GetStorage();
+  List<dynamic> searchList = box.read<List<dynamic>>('searchData') ?? [];
+  searchList.add(data);
+  box.write('searchData', searchList);
+}
+
+Future<List<dynamic>> retrieveSearchData()async{
+  final box = await GetStorage();
+  final searchList = await box.read('searchData');
+  return searchList;
+}
+

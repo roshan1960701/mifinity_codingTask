@@ -204,9 +204,8 @@ class _SignInScreenState extends State<SignInScreen> {
               highlightColor: btnColor,
               splashColor: btnColor,
               onTap: ()async{
-                // final isValid = signInController.loginFormKey.currentState!.validate();
-                // isValid ? AutoRouter.of(context).push(DashboardRoute()): (){};
-                AutoRouter.of(context).push(DashboardRoute());
+                final isValid = signInController.loginFormKey.currentState!.validate();
+                isValid ? AutoRouter.of(context).push(DashboardRoute()): (){};
               },
               child: loginBtn(context,'Sign In'),
             )),
