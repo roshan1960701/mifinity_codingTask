@@ -1,0 +1,157 @@
+{
+  "banners": [
+    {"image": "https://wallpapercave.com/wp/wp8525542.jpg"},
+    {"image": "https://getwallpapers.com/wallpaper/full/9/3/4/1267903-widescreen-movie-poster-wallpaper-1920x1080-smartphone.jpg"},
+    {"image": "https://c4.wallpaperflare.com/wallpaper/364/270/424/movies-hollywood-movies-wallpaper-preview.jpg"},
+    {"image": "https://c4.wallpaperflare.com/wallpaper/726/46/535/movies-hollywood-movies-wallpaper-preview.jpg"},
+    {"image": "https://www.tallengestore.com/cdn/shop/products/BeautyAndTheBeast-LiveAction-HollywoodEnglishMoviePoster_23bd9882-b84d-4070-a69b-e72d8a87633e.jpg?v=1625220675"}
+
+  ],
+  "productionHouse": [
+    {"image": "https://pngimg.com/d/walt_disney_PNG36.png"},
+    {"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjmHn7hDycWvYvGnj50dxygz2EUz8MBKKCqg&s"},
+    {"image": "https://www.pngall.com/wp-content/uploads/15/Universal-Studios-Logo-PNG-Picture.png"},
+    {"image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/104318ea-336b-45e4-a129-92a946802393/dgmrapk-c46ee190-c2dc-4fa7-a36d-40d0f9a4c8f1.png/v1/fill/w_1280,h_534,q_80,strp/pixar_logo_by_tricia25_dgmrapk-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTM0IiwicGF0aCI6IlwvZlwvMTA0MzE4ZWEtMzM2Yi00NWU0LWExMjktOTJhOTQ2ODAyMzkzXC9kZ21yYXBrLWM0NmVlMTkwLWMyZGMtNGZhNy1hMzZkLTQwZDBmOWE0YzhmMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.BirkqI5dOkvNYtpjLJsk0njJ6WGRkJAWZYRD1Of5HT4"},
+    {"image": "https://i.pinimg.com/originals/de/1d/0d/de1d0da76328494970a0e4b0aeaa5a2a.png"},
+    {"image": "https://w7.pngwing.com/pngs/875/281/png-transparent-warner-bros-television-distribution-warner-home-video-warner-bros-interactive-entertainment-others.png"},
+    {"image": "https://www.clipartmax.com/png/middle/269-2698749_hollywood-movie-production-companies-logo-vector-and-sony-pictures-logo-png.png"},
+    {"image": "https://inkbotdesign.com/wp-content/uploads/2023/05/Dreamworks-logo-design-1024x640.png"},
+    {"image": "https://e7.pngegg.com/pngimages/518/548/png-clipart-fx-movie-channel-logo-film-fox-movies-20th-century-fox-logo-television-text-thumbnail.png"}
+
+  ],
+
+  "moviesCollection": [
+    {
+      "category": "Recommended for you",
+      "movies": [
+        {
+          "title": "WandaVision",
+          "image": "https://m.media-amazon.com/images/M/MV5BZGEwYmMwZmMtMTQ3MS00YWNhLWEwMmQtZTU5YTIwZmJjZGQ0XkEyXkFqcGdeQXVyMTI5MzA5MjA1._V1_FMjpg_UX1000_.jpg",
+          "genre": ["Sitcom", "Superhero","Mystery","Action","Drama","Romance","Comedy","Science fiction"]
+        },
+        {
+          "title": "The Simpsons",
+          "image": "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/simpsons_movie.jpg",
+          "genre": ["Animation","Comedy","Drama","Sitcom","Adventure","Satire"]
+        },
+        {
+          "title": "Avatar",
+          "image": "https://musicart.xboxlive.com/7/4d4d6500-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
+          "genre": ["Adventure","Action","Drama","Science fiction","Mystery","Fantasy"]
+        },
+        {
+          "title": "Oppenheimer",
+          "image": "https://bestsimilar.com/img/movie/thumb/22/81575.jpg",
+          "genre": ["Science fiction","Thriller","Drama"]
+        },
+        {
+          "title": "The Godfather",
+          "image": "https://static.javatpoint.com/best/images/best-hollywood-movies-of-all-time1.png",
+          "genre": ["Mafia","Action","Crime","Gangster","Romance","Suspense","Detective"]
+        }
+      ]
+    },
+    {
+      "category": "Trending Movies",
+      "movies": [
+        {
+          "title": "Fast X",
+          "image": "https://www.boxofficepro.com/wp-content/uploads/2023/04/fastx775x970-copy.png",
+          "genre": ["Action","Adventure","Crime","Thriller","Road","Mystery","Suspense"]
+        },
+        {
+          "title": "Avengers: Endgame",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
+          "genre": ["Action","Superhero","Science fiction","Adventure","Fantasy"]
+        },
+        {
+          "title": "Journey 2",
+          "image": "https://wp.scoopwhoop.com/wp-content/uploads/2024/04/04162434/image-6.png",
+          "genre": ["Adventure","Action","Comedy","Science fiction","Fantasy"]
+        },
+        {
+          "title": "Terminator: Dark Fate",
+          "image": "https://m.media-amazon.com/images/M/MV5BNzhlYjE5MjMtZDJmYy00MGZmLTgwN2MtZGM0NTk2ZTczNmU5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+          "genre": ["Science fiction","Action","Adventure","Thriller"]
+        },
+        {
+          "title": "Moana",
+          "image": "https://lumiere-a.akamaihd.net/v1/images/p_moana_20530_214883e3.jpeg",
+          "genre": ["Animation","Comedy","Action","Fantasy","Adventure"]
+        }
+      ]
+    },
+    {
+      "category": "Hit Movies",
+      "movies": [
+        {
+          "title": "Doctor Strange in the Multiverse of Madness",
+          "image": "https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_.jpg",
+          "genre": ["Action","Horror","Superhero","Fantasy","Drama","Adventure","Science fiction"]
+        },
+        {
+          "title": "Eternals",
+          "image": "https://cdn.marvel.com/content/1x/eternals_lob_crd_06.jpg",
+          "genre": ["Action","Horror","Superhero","Fantasy","Drama","Adventure","Science fiction"]
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg",
+          "genre": ["Action","Horror","Superhero","Fantasy","Drama","Adventure","Science fiction"]
+        },
+        {
+          "title": "Ford v Ferrari",
+          "image": "https://www.streetmachine.com.au/wp-content/uploads/2023/08/ford-vs-ferrari-poster.jpg",
+          "genre": ["Sports","Drama","Action","Racing","Adventure"]
+        },
+        {
+          "title": "Black Panther",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg",
+          "genre": ["Action","Horror","Superhero","Fantasy","Drama","Adventure","Science fiction"]
+        }
+      ]
+    },
+    {
+      "category": "Popular on Hotstar",
+      "movies": [
+        {
+          "title": "Shang-Chi",
+          "image": "https://th.bing.com/th/id/OIP.C6hLWfWzJQXW7iXxA_GNUgAAAA?rs=1&pid=ImgDetMain",
+          "genre": ["Action","Comedy","Fantasy","Kung fu","Drama","Suspense","Thriller","Science fiction"]
+        },
+        {
+          "title": "Venom",
+          "image": "https://qph.cf2.quoracdn.net/main-qimg-d330ff6ed5e7fd81b10dfe6adc313c78-lq",
+          "genre": ["Action","Horror","Comedy","Superhero","Suspense","Drama","Crime","Mystery","Adventure"]
+        },
+        {
+          "title": "Prey",
+          "image": "https://upload.wikimedia.org/wikipedia/en/f/f4/Prey_2022_poster.png",
+          "genre": ["Action","Horror","Adventure","Suspense","Drama","Science fiction","Thriller"]
+        },
+        {
+          "title": "Escape Plan",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTk3OTcxMTEyNl5BMl5BanBnXkFtZTcwMDQ4MjQ2OQ@@._V1_.jpg",
+          "genre": ["Action","Adventure","Suspense","Drama","Science fiction","Thriller"]
+        },
+        {
+          "title": "Real Steel",
+          "image": "https://play-lh.googleusercontent.com/qHPxOPhgWSKE5E8SsvkUX1X6WtNTbJ5arBLWfZKM0rzDz-sWwUA38fiWCYmMiNwn8PGC",
+          "genre": ["Action","Drama","Science fiction","Sports"]
+        },
+        {
+          "title": "Need for Speed",
+          "image": "https://play-lh.googleusercontent.com/yhWtZaLkJ6kSeLFcUUs9bwCUVXNbUCRlwGD_770Fl1-nVEzcDNiB-16liut-3PUd_nFv=w240-h480-rw",
+          "genre": ["Action","Sports","Racing","Adventure","Crime","Thriller"]
+        }
+
+
+
+
+
+
+
+      ]
+    }
+  ]
+}
