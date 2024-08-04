@@ -25,10 +25,6 @@ class _SearchScreenState extends State<SearchScreen> {
     super.initState();
     generatedColor = generateUniqueColors(dashboardController.genreNames.length);
 
-    print(dashboardController.moviesDataList.firstWhere((category) => category['category'] == 'Popular on Hotstar')['movies']);
-
-
-
   }
 
   Widget searchBar(context){
@@ -54,9 +50,8 @@ class _SearchScreenState extends State<SearchScreen> {
           print(dashboardController.searchText.value);
         },*/
         onChanged: (value){
-          dashboardController.searchText.value = value!;
-
-
+          dashboardController.searchText.value = value;
+          print(dashboardController.searchText.value);
         },
 
         decoration: InputDecoration(
@@ -104,7 +99,7 @@ class _SearchScreenState extends State<SearchScreen> {
         borderRadius: BorderRadius.all(Radius.circular(5.0)),
       ),
       child: Stack(
-        clipBehavior:Clip.hardEdge,
+        clipBehavior:Clip.antiAlias,
         children: [
           Align(
             alignment: Alignment.centerLeft,
@@ -155,7 +150,8 @@ class _SearchScreenState extends State<SearchScreen> {
             crossAxisSpacing:25.0,
             mainAxisSpacing: 25.0,
             childAspectRatio: 1.0,
-            mainAxisExtent: 80.0,
+
+            mainAxisExtent: getHeight(context) * 0.08,
           ),
           itemBuilder: (BuildContext,index){
             final colorName = generatedColor[index];
