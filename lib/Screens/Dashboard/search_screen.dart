@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:mifinity_task/Router/app_router.gr.dart';
 import 'package:mifinity_task/Colors/colors.dart';
 import 'package:mifinity_task/Utility/utility.dart';
 import 'package:get/get.dart';
@@ -27,31 +28,57 @@ class _SearchScreenState extends State<SearchScreen> {
 
   }
 
-  Widget searchBar(context){
+  Widget searchBar(){
+    return InkWell(
+      onTap: ()async{
+        AutoRouter.of(context).push(SearchPageRoute());
+      },
+      child: Container(
+          width: getWidth(context),
+          height: 46,
+          decoration: BoxDecoration(
+            shape: BoxShape.rectangle,
+            color: Colors.white.withOpacity(0.1),
+            borderRadius: BorderRadius.all(Radius.circular(6.0)),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              paddingAll(0.0, 0.0, 10.0, 0.0, Icon(Icons.search_rounded,color: Colors.white,),),
+              paddingAll(0.0, 0.0,0.0, getWidth(context) * 0.15, Text("What do you want to Watch?", style: TextStyle(
+                fontSize: getFontSize(context, 16),
+                color: Colors.white,
+                fontWeight: FontWeight.w400,
+              ),),),
+              paddingAll(0.0, 0.0, 0.0, 10.0, Icon(Icons.mic,color: Colors.white,),),
+            ],
+          )
+      ),
+    );
+  }
+
+  /*Widget searchBar(context){
     return Container(
       width: getWidth(context),
       decoration: BoxDecoration(
         // color: Colors.deepOrange,
         // color: Colors.white.withOpacity(0.1),
-
       ),
       child: TextFormField(
         cursorColor: primaryColor,
         keyboardType: TextInputType.text,
         controller: dashboardController.searchController,
         minLines: 1,
+        textInputAction: TextInputAction.search,
         style: TextStyle(
           fontSize: getFontSize(context, 16),
           color: Colors.white,
           fontWeight: FontWeight.w400,
         ),
-        /*onSaved: (value){
-          dashboardController.searchText.value = value!;
-          print(dashboardController.searchText.value);
-        },*/
         onChanged: (value){
-          dashboardController.searchText.value = value;
-          print(dashboardController.searchText.value);
+          // dashboardController.searchText.value = value;
+          // print(dashboardController.searchText.value);
+          dashboardController.getMoviesByQuery(value);
         },
 
         decoration: InputDecoration(
@@ -90,7 +117,7 @@ class _SearchScreenState extends State<SearchScreen> {
         ),
       ),
     );
-  }
+  }*/
 
   Widget categoryTiles(colorName,categoryName,src){
     return paddingAll(0.0, 0.0, 0.0, 0.0, Container(
@@ -234,7 +261,7 @@ class _SearchScreenState extends State<SearchScreen> {
         child: SingleChildScrollView(
             child: Column(
               children: [
-                paddingAll(20.0, 0.0, 10.0, 10.0, searchBar(context),),
+                paddingAll(20.0, 0.0, 10.0, 10.0, searchBar(),),
                 paddingAll(10.0, 0.0, 10.0, 10.0, Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

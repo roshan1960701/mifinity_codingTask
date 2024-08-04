@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:mifinity_task/Storage/storage.dart';
-import 'package:mifinity_task/Storage/dashboard_model.dart';
 import 'dart:convert';
+import 'package:mifinity_task/Storage/movies_model.dart';
 
 class DashboardController extends GetxService{
 
@@ -13,7 +13,6 @@ class DashboardController extends GetxService{
   var moviesDataList  = [].obs;
   TextEditingController searchController = TextEditingController();
   var searchText = ''.obs;
-  var moviesCategories = [].obs;
   var filteredMovies = [].obs;
   List<Map<String,String>> genreNames = [
     {'genre':'Action','image':'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg'},
@@ -45,21 +44,31 @@ class DashboardController extends GetxService{
     bannerList.addAll(response['banners']);
     productionList.addAll(response['productionHouse']);
     moviesDataList.addAll(response['moviesCollection']);
-    // moviesCategories.addAll(moviesDataList['category']);
-    //searchMoviesData = extractMovies(moviesCategories);
+    // final results = getMoviesByQuery('Sports');
+    // String query = "aven";
+    // final results = getMoviesByQuery(query, movieCategories);
   }
 
-  // Future<void> extractMovies(moviesCategories) {
-  //   return moviesCategories.expand((c) => c['movies']).toList();
-  // }
+   getMoviesByQuery(String query) {
+    for (var category in moviesDataList) {
+      for (var movie in category['movies']) {
+        // if (movie['title'].toLowerCase().contains(query.toLowerCase())) {
+        //   matchedMovies.add(movie);
+        // }
 
-  // Future<void> searchMoviesData(query)async{
-  //   filteredMovies = extractMovies(moviesCategories).where((movie) {
-  //     return movie['title'].toLowerCase().contains(query.toLowerCase());
-  //   }).toList();
-  //
-  //   print(filteredMovies);
-  //
-  // }
+        // Check if the movie title contains the query
+        bool titleMatches = movie['title'].toLowerCase().contains(query.toLowerCase());
+
+        // Check if any genre in the movie's genre list contains the query
+        bool genreMatches = movie['genre'].any((genre) => (genre as String).toLowerCase().contains(query.toLowerCase()));
+
+        // If either condition is true, add the movie to the matchedMovies list
+        if (titleMatches || genreMatches) {
+          filteredMovies.add(movie);
+        }
+      }
+    }
+    print(filteredMovies);
+  }
 
 }
